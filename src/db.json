@@ -1,0 +1,13 @@
+{
+  "days": [
+    { "id": 1, "date": "2021-12-30T14:40:45.377Z", "moodId": 3, "message": "" },
+    { "id": 2, "date": "2021-12-30T14:43:59.468Z", "moodId": 1, "message": "" },
+    { "id": 3, "date": "2021-12-30T14:44:47.221Z", "moodId": 2, "message": "" }
+  ],
+  "moods": [
+    { "id": 0, "name": "Struggling", "color": "red" },
+    { "id": 1, "name": "Demotivated", "color": "green" },
+    { "id": 2, "name": "Passive", "color": "yellow" },
+    { "id": 3, "name": "At Peace", "color": "blue" }
+  ]
+}
