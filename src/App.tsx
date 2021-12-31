@@ -1,11 +1,16 @@
+//Packages
 import React, { useEffect, useState } from "react";
+//Styles
 import "./App.css";
 import { Header, Title } from "./App.styles";
+//Routes
 import { getMoods, updateMood } from "./routes/moodRoutes";
 import { getDays } from "./routes/dayRoutes";
+//Interfaces
 import Mood from "./interfaces/mood";
-import MoodCard from "./components/MoodCard";
 import Day from "./interfaces/day";
+//Components
+import MoodCard from "./components/MoodCard";
 import DayCard from "./components/DayCard";
 
 function App() {
@@ -49,7 +54,7 @@ function App() {
           ></MoodCard>
         );
       })}
-      {days.map((day: Day) => {
+      {/* {days.map((day: Day) => {
         return (
           <DayCard
             key={day.id}
@@ -60,7 +65,7 @@ function App() {
             date={day.date}
           ></DayCard>
         );
-      })}
+      })} */}
     </div>
   );
 }

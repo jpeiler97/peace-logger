@@ -23,22 +23,22 @@
     {
       "id": 0,
       "name": "Struggling",
-      "color": "#9575cd"
+      "color": "#009688"
     },
     {
       "id": 1,
       "name": "Demotivated",
-      "color": "#3f51b5"
+      "color": "#004d40"
     },
     {
       "id": 2,
       "name": "Passive",
-      "color": "#00796b"
+      "color": "#1a237e"
     },
     {
       "id": 3,
       "name": "At Peace",
-      "color": "#512da8"
+      "color": "#81c784"
     }
   ]
 }
