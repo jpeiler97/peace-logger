@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import { Header, Title } from "./App.styles";
-import { getMoods } from "./routes/moodRoutes";
+import { getMoods, updateMood } from "./routes/moodRoutes";
 import { getDays } from "./routes/dayRoutes";
 import Mood from "./interfaces/mood";
 import MoodCard from "./components/MoodCard";
@@ -11,6 +11,13 @@ import DayCard from "./components/DayCard";
 function App() {
   const [moods, setMoods] = useState<Mood[]>([]);
   const [days, setDays] = useState<Day[]>([]);
+
+  const handleEditMood = (moodToUpdate: Mood) => {
+    setMoods(
+      moods.map((mood) => (mood.id === moodToUpdate.id ? moodToUpdate : mood))
+    );
+    updateMood(moodToUpdate);
+  };
 
   useEffect(() => {
     getMoods().then((res) => {
@@ -36,8 +43,9 @@ function App() {
           <MoodCard
             key={mood.id}
             id={mood.id}
-            mood={mood.name}
+            name={mood.name}
             color={mood.color}
+            editMood={handleEditMood}
           ></MoodCard>
         );
       })}
